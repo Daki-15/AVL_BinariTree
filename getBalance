@@ -1,0 +1,6 @@
+int getBalance(Node *root){
+    if(root == NULL){
+        return 0;
+    }
+    return height(root->left) - height(root->right);
+}
