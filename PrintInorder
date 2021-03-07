@@ -1,0 +1,7 @@
+void Inorder(Node *root) {
+  if (root != NULL) {
+    Inorder(root->left);
+    printf("%d ", root->value);
+    Inorder(root->right);
+  }
+}
