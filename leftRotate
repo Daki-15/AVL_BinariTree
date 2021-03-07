@@ -1,0 +1,12 @@
+Node *leftRotate(Node *root){
+    Node *temp1=root->right;
+    Node *temp2=temp1->left;
+
+    temp1->left=root;
+    root->left=temp2;
+
+    root->height=max(height(root->left), height(root->right)) + 1;
+    temp1->height=max(height(temp1->left), height(temp1->right)) + 1;
+
+    return temp1;
+}
