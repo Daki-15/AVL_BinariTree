@@ -1,0 +1,23 @@
+typedef struct Node{
+    int value;
+    struct Node *left;
+    struct Node *right;
+    int height;
+}Node;
+
+Node *newNode(int value){
+
+    Node *temp=(Node*)malloc(sizeof(Node));
+
+    if(temp==NULL){
+        printf("ERROR");
+        exit(1);
+    }
+
+    temp->value=value;
+    temp->left=NULL;
+    temp->right=NULL;
+    temp->height=1;
+
+    return temp;
+}
